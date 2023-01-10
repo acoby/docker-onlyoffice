@@ -80,12 +80,9 @@ EXPOSE 80 443
 ARG COMPANY_NAME=onlyoffice
 ARG PRODUCT_NAME=documentserver
 ARG PRODUCT_EDITION=
-ARG PACKAGE_VERSION=v7.0.0.132-btactic
+ARG PACKAGE_VERSION=7.0.0-132.btactic1
 ARG TARGETARCH=amd64
-# ARG PACKAGE_BASEURL="http://download.onlyoffice.com/install/documentserver/linux"
-ARG PACKAGE_BASEURL="https://github.com/btactic/document-server-package/releases/download/v7.0.0.132-btactic/"
-
-# https://github.com/btactic/document-server-package/releases/download/v7.0.0.132-btactic/onlyoffice-documentserver_7.0.0-132.btactic1_amd64.deb
+ARG PACKAGE_BASEURL="https://github.com/btactic/document-server-package/releases/download/v7.0.0.132-btactic"
 
 ENV COMPANY_NAME=$COMPANY_NAME \
     PRODUCT_NAME=$PRODUCT_NAME \
