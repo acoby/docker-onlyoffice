@@ -489,6 +489,9 @@ update_nginx_settings(){
     sed 's/linux/docker/' -i ${NGINX_ONLYOFFICE_EXAMPLE_CONF}
   fi
 
+  # TRW fix a bug with the internal cache mechanism
+  sed 's/cache/_CACHE_/' -i /etc/nginx/includes/ds-docservice.conf
+
   documentserver-update-securelink.sh -s ${SECURE_LINK_SECRET:-$(pwgen -s 20)} -r false
 }
 
