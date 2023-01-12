@@ -83,12 +83,13 @@ ARG PRODUCT_EDITION=
 ARG PACKAGE_VERSION=
 ARG TARGETARCH=amd64
 ARG PACKAGE_BASEURL="https://github.com/btactic/document-server-package/releases/download/v7.0.0.132-btactic"
+ARG PACKAGE_BASEURL="https://github.com/btactic/document-server-package/releases/download/v7.2.2.56-btactic"
 
 ENV COMPANY_NAME=$COMPANY_NAME \
     PRODUCT_NAME=$PRODUCT_NAME \
     PRODUCT_EDITION=$PRODUCT_EDITION
 
-RUN PACKAGE_FILE="onlyoffice-documentserver_7.0.0-132.btactic1_amd64.deb" && \
+RUN PACKAGE_FILE="onlyoffice-documentserver_7.2.2-56-btactic1_amd64.deb" && \
     wget -q -P /tmp "$PACKAGE_BASEURL/$PACKAGE_FILE" && \
     apt-get -y update && \
     service postgresql start && \
